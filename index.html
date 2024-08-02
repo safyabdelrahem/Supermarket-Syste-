@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CRUDS</h1>
+    <div style="padding: 40px;">
+        <div class="w-75 mx-auto my-5">
+            <form>
+                <div class="form-control">
+                    <label for="ProductName">Product Name:</label>
+                    <input class="my-2 form-control" type="text" id="ProductName">
+                    <small class="text-muted">Product Name must be characters only</small>
+                </div>
+                <div class="form-control">
+                    <label for="ProductPrice">Product Price:</label>
+                    <input class="my-2 form-control" type="number" id="ProductPrice">
+                    <small class="text-muted">Product Price must be numbers only</small>
+                </div>
+                <div class="form-control">
+                    <label for="ProductCategory">Product Category:</label>
+                    <input class="my-2 form-control" type="text" id="ProductCategory">
+                    <small class="text-muted">Product Category must be characters only</small>
+                </div>
+                <div class="form-control">
+                    <label for="ProductDescribtion">Product Description:</label>
+                    <textarea class="my-2 form-control" id="ProductDescribtion"></textarea>
+                    <small class="text-muted">Product Description must be characters only</small>
+                </div>
+                <button id="addButton" class="my-3 btn btn-outline-info">Add Product</button>
+            </form>
+        </div>
+        <div class="w-75 mx-auto my-5">
+            <label>Search By Product Name:</label>
+            <input onkeyup="searchProduct(this.value)" class="form-control" type="text" id="searchInput">
+        </div>
+        <div class="data">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Delete</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
